@@ -1,4 +1,4 @@
-b162fc9f0ae177618a81fb45aae7d6a1 *DESCRIPTION
+6f72fcaf9be1bfc4fbb2c61be2450a6b *DESCRIPTION
 d2cecf92d1c9b407e188ebd4425ebc19 *NAMESPACE
 af33ff8dee5cc8650d6ed31b80cc4209 *R/ABB-IEP-FS.R
 f315f8f262c1a6bbd0f4133721694bb2 *R/ANR-F.R
@@ -9,7 +9,7 @@ ad2d7c658eecb0f646f0053ed0c502e0 *R/Alcalaetal_A.R
 e4ddd3487d8f0cb039848fb58b5aebca *R/AllKNN-TSS.R
 f409ff56bc31020b77edc0a837a04439 *R/AllPosible-MV.R
 2fd146cd093964f74f3df3eb8ca2652d *R/Apriori_A.R
-41619693ad7ead5ddb8896bc4a18104d *R/AssociationRulesAlgorithm.R
+6f31df0049e73e75db30b8f34315509d *R/AssociationRulesAlgorithm.R
 86614dd5362cb82b1c09f6158fe5a3a5 *R/AssociativeClassificationAlgorithm.R
 bb5fb8a5b32778126c7dcbe2b9fca57e *R/BNGE-C.R
 5dba64a0ff004bb17f7c4f69effdf4c1 *R/BSE-C.R
@@ -29,7 +29,7 @@ e34553cba1892c28faf962db763bdd43 *R/CNN-C.R
 1334f62105d4d1dd62fe183a2a368429 *R/C_SVM-C.R
 00edf5a27c2b3a1b1a27af76717a7f2f *R/CamNN-C.R
 2266ad0cf898fecc428257c94ac567c4 *R/CenterNN-C.R
-5cf9994b91b25fccc42015380afb3736 *R/ClassificationAlgorithm.R
+13338a977d4a18fd8ecffef05f084800 *R/ClassificationAlgorithm.R
 ec49cef23e00949a459870025894601d *R/ClassificationResults.R
 ed3cc1923f7164eb8ab56eb3b9506f91 *R/CleanAttributes-TR.R
 bbe0cab023f5a837259defefa9f4504b *R/ClusterAnalysis-D.R
@@ -73,7 +73,7 @@ e2b6b556ee94b6aa156bf15507c40b62 *R/KMeans-MV.R
 9b62986f4f0af342611f666652ae1c2d *R/KNN-MV.R
 ef40d1f4e41833000703bf417e751b7e *R/KSNN-C.R
 c4406965be27ecef4ae9be84a869f8dc *R/KStar-C.R
-8d390d2fe4ae24412ee43555b80f56e8 *R/KeelAlgorithm.R
+0f5ee8ea2b961e22203ebd5cf70b0e44 *R/KeelAlgorithm.R
 40b843e3660695bb5f5191f74590d820 *R/KeelUtils.R
 0af7a406b64de106535869c7305e7840 *R/Kernel-C.R
 e5409d10d94026c04a963b329654740f *R/LDA-C.R
@@ -110,14 +110,14 @@ b572aea1d0d0cb4212abb1c66b86fbcf *R/PRISM-C.R
 1af4f428bac859356c2e03d3ff4b9f8f *R/PW-C.R
 3f398dc12eb713f616b2956cac581490 *R/PolQuadraticLMS-C.R
 4d3f2f5c3ee160856befd20c1b5f4f1e *R/PolQuadraticLMS-R.R
-db1435ae5b4cec5093885a5da4ab020f *R/PreprocessAlgorithm.R
+310cc4dfb22989017b24537676a1a5aa *R/PreprocessAlgorithm.R
 c87d9d5af07324e6999db0f208f9b768 *R/Proportional-D.R
 4d7a51310a91c41a67d80f712fd03f67 *R/QAR_CIP_NSGAII_A.R
 bc798a99ded6b5c9cf7c47086f5c64e9 *R/QDA-C.R
 5cc66ab8ae648196b7ad94ffd6c154d3 *R/RBFN-C.R
 e8d409bebfd5ddcf9a7b3c5c00658776 *R/RBFN-R.R
 4020dabc671aafd6f469a59bb51b23ec *R/RISE-C.R
-1e313d5e21663de7a18ac8331cfa9e3f *R/RegressionAlgorithm.R
+13034d8d7dab73e548c049de33ae9e1b *R/RegressionAlgorithm.R
 e399e9609b62cef9f229ce5d998e5f37 *R/RegressionResults.R
 5ef4a41eddc856dbf8c0afe7e1fa50e4 *R/Relief-FS.R
 a1cfd21780b565a869957285bb27eeef *R/Ripper-C.R

@@ -1,9 +1,9 @@
 Package: RKEEL
 Type: Package
 Title: Using Keel in R Code
-Version: 1.1.15
+Version: 1.1.17
 Depends: R (>= 3.0)
-Date: 2017-01-10
+Date: 2017-01-17
 Authors@R: c(
 	person("Jose M.", "Moyano", email = "i02momuj@uco.es", role = c("aut", "cre")),
 	person("Luciano", "Sanchez Ramos", email = "luciano@uniovi.es", role = "aut"),
@@ -19,8 +19,8 @@ Description: KEEL is a popular Java software for a large number of different kno
 SystemRequirements: Java (>= 7.0)
 License: GPL
 Imports: R6, XML, doParallel, foreach, gdata, RKEELjars (>= 1.0.14),
-        RKEELdata (>= 1.0.2), pmml, arules, Matrix
+        RKEELdata (>= 1.0.2), pmml, arules, Matrix, rJava
 NeedsCompilation: no
-Packaged: 2017-01-10 19:09:45 UTC; jose
+Packaged: 2017-01-17 11:42:03 UTC; jose
 Repository: CRAN
-Date/Publication: 2017-01-11 08:59:23
+Date/Publication: 2017-01-17 13:28:12
