@@ -1,9 +1,9 @@
 Package: RKEEL
 Type: Package
 Title: Using Keel in R Code
-Version: 1.1.19
+Version: 1.1.20
 Depends: R (>= 3.2.0)
-Date: 2017-01-26
+Date: 2017-01-30
 Authors@R: c(
 	person("Jose M.", "Moyano", email = "jmoyano@uco.es", role = c("aut", "cre")),
 	person("Luciano", "Sanchez Ramos", email = "luciano@uniovi.es", role = "aut"),
@@ -21,6 +21,6 @@ License: GPL
 Imports: R6, XML, doParallel, foreach, gdata, RKEELjars (>= 1.0.14),
         RKEELdata (>= 1.0.2), pmml, arules, Matrix, rJava
 NeedsCompilation: no
-Packaged: 2017-01-26 08:52:39 UTC; jose
+Packaged: 2017-01-30 12:33:33 UTC; jose
 Repository: CRAN
-Date/Publication: 2017-01-26 12:07:56
+Date/Publication: 2017-01-31 09:10:35

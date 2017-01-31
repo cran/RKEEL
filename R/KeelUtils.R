@@ -39,15 +39,20 @@ runSequential <- function(algorithmList) {
   if(class(algorithmList) != "list") {
     stop("Error. Argument must be a list with the algorithm objects.")
   }
+  cores <- 1
+  cl <- parallel::makeCluster(cores)
+  doParallel::registerDoParallel(cl)
 
-  cat("Executing experiment sequential", sep="\n")
+  cat(paste0("Executing experiment sequentially"), sep="\n")
 
-  #Eexcute algorithms sequentially
+  #Execute algorithms in parallel
   i<-1
-  exec_algs <- foreach(i=1:length(algorithmList)) %do% {
+  exec_algs <- foreach(i=1:length(algorithmList)) %dopar% {
     algorithmList[[i]]$run()
     return(algorithmList[[i]])
   }
+  #Stop cluster
+  parallel::stopCluster(cl)
 
   cat("Experiment executed successfully", sep="\n")
 
