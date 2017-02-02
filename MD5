@@ -1,4 +1,4 @@
-c55318745b8b4d687405b9c1ee96cec4 *DESCRIPTION
+f7c4ecd214916d81d10b67dca4c37be5 *DESCRIPTION
 d2cecf92d1c9b407e188ebd4425ebc19 *NAMESPACE
 af33ff8dee5cc8650d6ed31b80cc4209 *R/ABB-IEP-FS.R
 f315f8f262c1a6bbd0f4133721694bb2 *R/ANR-F.R
@@ -74,7 +74,7 @@ e2b6b556ee94b6aa156bf15507c40b62 *R/KMeans-MV.R
 ef40d1f4e41833000703bf417e751b7e *R/KSNN-C.R
 c4406965be27ecef4ae9be84a869f8dc *R/KStar-C.R
 0f5ee8ea2b961e22203ebd5cf70b0e44 *R/KeelAlgorithm.R
-cfb31dbb400c46ae65d5602648e911de *R/KeelUtils.R
+a9f26e767eefc5f3880ac6ff248541d3 *R/KeelUtils.R
 0af7a406b64de106535869c7305e7840 *R/Kernel-C.R
 e5409d10d94026c04a963b329654740f *R/LDA-C.R
 ec351011076f612dbe32e63aa1a1098b *R/LVF-IEP-FS.R
@@ -276,6 +276,7 @@ bfae3a0f7b2d94d0fbf89e95ff96fcf2 *man/hasContinuousData.Rd
 f05f709299719b80f69a1da329ed0054 *man/isMultiClass.Rd
 5b2ab022c952a984777cb0bd4d716398 *man/loadKeelDataset.Rd
 10e58750fa4c35e4e8a18d559a4df590 *man/readKeel.Rd
+2445070ae1f666703187bbd172b1343b *man/runCV.Rd
 cc1ea68e466ea343460d1c54cafc8aa4 *man/runParallel.Rd
 36b63672054b079c057749f9226aae4a *man/runSequential.Rd
 47b137e10d25c410ed6dfa5611b9a9ea *man/writeDatFromDataframe.Rd
