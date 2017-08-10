@@ -1,8 +1,9 @@
-f7c4ecd214916d81d10b67dca4c37be5 *DESCRIPTION
+157b31a9c22db5485d929cbee1bc34e0 *DESCRIPTION
 d2cecf92d1c9b407e188ebd4425ebc19 *NAMESPACE
 af33ff8dee5cc8650d6ed31b80cc4209 *R/ABB-IEP-FS.R
 f315f8f262c1a6bbd0f4133721694bb2 *R/ANR-F.R
 9e78449ff546a0716fe7da8803e25dfc *R/ART-C.R
+4dfa36571ec0a29dfccb297500955df1 *R/AdaBoost-I.R
 0d9404c68a5b5942e229b0ecf3664bbc *R/AdaBoostNC-C.R
 251daea34c9e8adf1913360c015fae91 *R/Alatasetal_A.R
 ad2d7c658eecb0f646f0053ed0c502e0 *R/Alcalaetal_A.R
@@ -139,6 +140,7 @@ b14a78aa372ade33740c14babce52afe *R/ZScore-TR.R
 bddc04403c6c77f48b6cf3104e08b2a8 *man/ABB-IEP-FS.Rd
 05a3eaa5089c346a4854dc032f65355b *man/ANR-F.Rd
 dc2fb05f5a00178314a9bdfe676b92af *man/ART-C.Rd
+ee361b59ecd447c633424f6c1a7c573a *man/AdaBoost-I.Rd
 a012b60590ef0bee99bd1460037392a1 *man/AdaBoostNC-C.Rd
 baf58076a1e58eadd495bca4cbd6fe4f *man/Alatasetal_A.Rd
 0787a9a7aac0f9ca8f3ff5d0c515a901 *man/Alcalaetal_A.Rd
