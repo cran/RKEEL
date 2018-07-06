@@ -1,21 +1,27 @@
 \docType{class}
-\name{FuzzyApriori_A}
-\alias{FuzzyApriori_A}
-\alias{R6_FuzzyApriori_A}
-\title{FuzzyApriori_A KEEL Association Rules Algorithm}
+\name{NICGAR_A}
+\alias{NICGAR_A}
+\alias{R6_NICGAR_A}
+\title{NICGAR_A KEEL Association Rules Algorithm}
 \description{
-FuzzyApriori_A Association Rules Algorithm from KEEL. 
+NICGAR_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-FuzzyApriori_A(dat, NumberofPartitionsforNumericAttributes, 
-  UseMaxOperatorfor1FrequentItemsets, MinimumSupport, MinimumConfidence)
+NICGAR_A(dat, seed, NumberofEvaluations, PopulationSize, ProbabilityofMutation, 
+  Thefactorofamplitudeforeachattributeofthedataset, NichingThreshold, 
+  QualityThreshold, PercentUpdate)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
-\item{NumberofPartitionsforNumericAttributes}{Number of Partitions for Numeric Attributes. Default value = 4}
-\item{UseMaxOperatorfor1FrequentItemsets}{Use Max Operator for 1 Frequent Itemsets. Default value = "false"}
-\item{MinimumSupport}{Minimum Support. Default value = 0.1}
-\item{MinimumConfidence}{Minimum Confidence. Default value = 0.8}
+\item{seed}{seed. Default value = 1286082570}
+\item{NumberofEvaluations}{Number of Evaluations. Default value = 1286082570}
+\item{PopulationSize}{Population Size. Default value = 1286082570}
+\item{ProbabilityofMutation}{Probability of Mutation. Default value = 1286082570}
+\item{Thefactorofamplitudeforeachattributeofthedataset}{The factor of amplitude for each attribute of the dataset. Default value = 1286082570}
+\item{NichingThreshold}{Niching Threshold. Default value = 1286082570}
+\item{QualityThreshold}{Quality Threshold. Default value = 1286082570}
+\item{PercentUpdate}{Percent Update. Default value = 1286082570}
+
 
 
 }
@@ -84,33 +90,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- FuzzyApriori_A(dat)
+#algorithm <- NICGAR_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}

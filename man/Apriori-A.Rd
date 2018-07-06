@@ -1,35 +1,21 @@
 \docType{class}
-\name{Alatasetal_A}
-\alias{Alatasetal_A}
-\alias{R6_Alatasetal_A}
-\title{Alatasetal_A KEEL Association Rules Algorithm}
+\name{Apriori_A}
+\alias{Apriori_A}
+\alias{R6_Apriori_A}
+\title{Apriori_A KEEL Association Rules Algorithm}
 \description{
-Alatasetal_A Association Rules Algorithm from KEEL. 
+Apriori_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-Alatasetal_A(dat, seed, NumberofEvaluations, InitialRandomChromosomes, 
-  rDividingPoints, TournamentSize, ProbabilityofCrossover, 
-  MinimumProbabilityofMutation, MaximumProbabilityofMutation, 
-  ImportanceofRulesSupport, ImportanceofRulesConfidence, 
-  ImportanceofNumberofInvolvedAttributes, ImportanceofIntervalsAmplitude, 
-  ImportanceofNumberofRecordsAlreadyCovered, AmplitudeFactor)
+Apriori_A(dat, NumberofPartitionsforNumericAttributes, MinimumSupport, 
+  MinimumConfidence)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
-\item{seed}{seed. Default value = 1286082570}
-\item{NumberofEvaluations}{NumberofEvaluations. Default value = 50000}
-\item{InitialRandomChromosomes}{Initial Random Chromosomes. Default value = 12}
-\item{rDividingPoints}{r-Dividing Points. Default value = 3}
-\item{TournamentSize}{TournamentSize. Default value = 10}
-\item{ProbabilityofCrossover}{Probability of Crossover. Default value = 0.7}
-\item{MinimumProbabilityofMutation}{Minimum Probability of Mutation. Default value = 0.05}
-\item{MaximumProbabilityofMutation}{Maximum Probability of Mutation. Default value = 0.9}
-\item{ImportanceofRulesSupport}{Importance of Rules Support. Default value = 5}
-\item{ImportanceofRulesConfidence}{Importance of Rules Confidence. Default value = 20}
-\item{ImportanceofNumberofInvolvedAttributes}{Importance of Number of Involved Attributes. Default value = 0.05}
-\item{ImportanceofIntervalsAmplitude}{Importance of Intervals Amplitude. Default value = 0.02}
-\item{ImportanceofNumberofRecordsAlreadyCovered}{Importance of Number of Records Already Covered. Default value = 0.01}
-\item{AmplitudeFactor}{Amplitude Factor. Default value = 2.0}
+\item{NumberofPartitionsforNumericAttributes}{Number of Partitions for Numeric Attributes. Default value = 4}
+\item{MinimumSupport}{Minimum Support. Default value = 0.1}
+\item{MinimumConfidence}{Minimum Confidence. Default value = 0.8}
+
 
 }
 \value{
@@ -97,33 +83,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- Alatasetal_A(dat)
+#algorithm <- Apriori_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}

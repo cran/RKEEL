@@ -1,22 +1,28 @@
 \docType{class}
-\name{Apriori_A}
-\alias{Apriori_A}
-\alias{R6_Apriori_A}
-\title{Apriori_A KEEL Association Rules Algorithm}
+\name{MOPNAR_A}
+\alias{MOPNAR_A}
+\alias{R6_MOPNAR_A}
+\title{MOPNAR_A KEEL Association Rules Algorithm}
 \description{
-Apriori_A Association Rules Algorithm from KEEL. 
+MOPNAR_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-Apriori_A(dat, NumberofPartitionsforNumericAttributes, MinimumSupport, 
-  MinimumConfidence)
+MOPNAR_A(dat, seed, objetives, evaluations, parameter, weightNeighborhood, 
+  wrobabilitySolutionsNeighborhood, maxSolutions, probabilityMutation, 
+  amplitude, threshold)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
-\item{NumberofPartitionsforNumericAttributes}{Number of Partitions for Numeric Attributes. Default value = 4}
-\item{MinimumSupport}{Minimum Support. Default value = 0.1}
-\item{MinimumConfidence}{Minimum Confidence. Default value = 0.8}
-
-
+\item{seed}{seed. Default value = 1286082570}
+\item{objetives}{objetives. Default value = 3}
+\item{evaluations}{evaluations. Default value = 50000}
+\item{parameter}{parameter. Default value = 13}
+\item{weightNeighborhood}{weightNeighborhood. Default value = 10}
+\item{wrobabilitySolutionsNeighborhood}{wrobabilitySolutionsNeighborhood. Default value = 0.9}
+\item{maxSolutions}{maxSolutions. Default value = 2}
+\item{probabilityMutation}{probabilityMutation. Default value = 0.1}
+\item{amplitude}{amplitude. Default value = 2.0}
+\item{threshold}{threshold. Default value = 5.0}
 }
 \value{
 A arules class with the  Association Rules for both \code{dat} dataset.
@@ -83,33 +89,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- Apriori_A(dat)
+#algorithm <- MOPNAR_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}

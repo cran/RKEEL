@@ -1,27 +1,30 @@
 \docType{class}
-\name{NICGAR_A}
-\alias{NICGAR_A}
-\alias{R6_NICGAR_A}
-\title{NICGAR_A KEEL Association Rules Algorithm}
+\name{MODENAR_A}
+\alias{MODENAR_A}
+\alias{R6_MODENAR_A}
+\title{MODENAR_A KEEL Association Rules Algorithm}
 \description{
-NICGAR_A Association Rules Algorithm from KEEL. 
+MODENAR_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-NICGAR_A(dat, seed, NumberofEvaluations, PopulationSize, ProbabilityofMutation, 
-  Thefactorofamplitudeforeachattributeofthedataset, NichingThreshold, 
-  QualityThreshold, PercentUpdate)
+MODENAR_A(dat, seed, PopulationSize, NumberofEvaluations, CrossoverrateCR, 
+  Thresholdforthenumberofnondominatedsolutions, 
+  Thefactorofamplitudeforeachattributeofthedataset, WeightforSupport, 
+  WeightforConfidence, WeightforComprehensibility, 
+  WeightforAmplitudeoftheIntervals)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
 \item{seed}{seed. Default value = 1286082570}
-\item{NumberofEvaluations}{Number of Evaluations. Default value = 1286082570}
-\item{PopulationSize}{Population Size. Default value = 1286082570}
-\item{ProbabilityofMutation}{Probability of Mutation. Default value = 1286082570}
-\item{Thefactorofamplitudeforeachattributeofthedataset}{The factor of amplitude for each attribute of the dataset. Default value = 1286082570}
-\item{NichingThreshold}{Niching Threshold. Default value = 1286082570}
-\item{QualityThreshold}{Quality Threshold. Default value = 1286082570}
-\item{PercentUpdate}{Percent Update. Default value = 1286082570}
-
+\item{PopulationSize}{Population Size. Default value = 100}
+\item{NumberofEvaluations}{Number of Evaluations. Default value = 50000}
+\item{CrossoverrateCR}{Crossover rate CR. Default value = 0.3}
+\item{Thresholdforthenumberofnondominatedsolutions}{Threshold for the number of non-dominated solutions. Default value = 60}
+\item{Thefactorofamplitudeforeachattributeofthedataset}{The factor of amplitude for each attribute of the dataset. Default value = 2}
+\item{WeightforSupport}{Weight for Support. Default value = 0.8}
+\item{WeightforConfidence}{Weight for Confidence. Default value = 0.2}
+\item{WeightforComprehensibility}{Weight for Comprehensibility. Default value = 0.1}
+\item{WeightforAmplitudeoftheIntervals}{Weight for Amplitude of the Intervals. Default value = 0.4}
 
 
 }
@@ -90,33 +93,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- NICGAR_A(dat)
+#algorithm <- MODENAR_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}

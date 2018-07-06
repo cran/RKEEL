@@ -1,30 +1,29 @@
 \docType{class}
-\name{MODENAR_A}
-\alias{MODENAR_A}
-\alias{R6_MODENAR_A}
-\title{MODENAR_A KEEL Association Rules Algorithm}
+\name{GeneticFuzzyApriori_A}
+\alias{GeneticFuzzyApriori_A}
+\alias{R6_GeneticFuzzyApriori_A}
+\title{GeneticFuzzyApriori_A KEEL Association Rules Algorithm}
 \description{
-MODENAR_A Association Rules Algorithm from KEEL. 
+GeneticFuzzyApriori_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-MODENAR_A(dat, seed, PopulationSize, NumberofEvaluations, CrossoverrateCR, 
-  Thresholdforthenumberofnondominatedsolutions, 
-  Thefactorofamplitudeforeachattributeofthedataset, WeightforSupport, 
-  WeightforConfidence, WeightforComprehensibility, 
-  WeightforAmplitudeoftheIntervals)
+GeneticFuzzyApriori_A(dat, seed, NumberofEvaluations, PopulationSize, 
+  ProbabilityofMutation, ProbabilityofCrossover, ParameterdforMMACrossover, 
+  NumberofFuzzyRegionsforNumericAttributes, UseMaxOperatorfor1FrequentItemsets, 
+  MinimumSupport, MinimumConfidence)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
 \item{seed}{seed. Default value = 1286082570}
-\item{PopulationSize}{Population Size. Default value = 100}
-\item{NumberofEvaluations}{Number of Evaluations. Default value = 50000}
-\item{CrossoverrateCR}{Crossover rate CR. Default value = 0.3}
-\item{Thresholdforthenumberofnondominatedsolutions}{Threshold for the number of non-dominated solutions. Default value = 60}
-\item{Thefactorofamplitudeforeachattributeofthedataset}{The factor of amplitude for each attribute of the dataset. Default value = 2}
-\item{WeightforSupport}{Weight for Support. Default value = 0.8}
-\item{WeightforConfidence}{Weight for Confidence. Default value = 0.2}
-\item{WeightforComprehensibility}{Weight for Comprehensibility. Default value = 0.1}
-\item{WeightforAmplitudeoftheIntervals}{Weight for Amplitude of the Intervals. Default value = 0.4}
+\item{NumberofEvaluations}{Number of Evaluations. Default value = 10000}
+\item{PopulationSize}{Population Size. Default value = 50}
+\item{ProbabilityofMutation}{Probability of Mutation. Default value = 0.01}
+\item{ProbabilityofCrossover}{Probability of Crossover. Default value = 0.8}
+\item{ParameterdforMMACrossover}{Parameterd for MMA Crossover. Default value = 0.35}
+\item{NumberofFuzzyRegionsforNumericAttributes}{Number of Fuzzy Regions for Numeric Attributes. Default value = 3}
+\item{UseMaxOperatorfor1FrequentItemsets}{Use Max Operator for 1 Frequent Itemsets. Default value = "false"}
+\item{MinimumSupport}{Minimum Support. Default value = 0.1}
+\item{MinimumConfidence}{Minimum Confidence. Default value = 0.8}
 
 
 }
@@ -93,33 +92,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- MODENAR_A(dat)
+#algorithm <- GeneticFuzzyApriori_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}

@@ -1,29 +1,26 @@
 \docType{class}
-\name{Alcalaetal_A}
-\alias{Alcalaetal_A}
-\alias{R6_Alcalaetal_A}
-\title{Alcalaetal_A KEEL Association Rules Algorithm}
+\name{MOEA_Ghosh_A}
+\alias{MOEA_Ghosh_A}
+\alias{R6_MOEA_Ghosh_A}
+\title{MOEA_Ghosh_A KEEL Association Rules Algorithm}
 \description{
-Alcalaetal_A Association Rules Algorithm from KEEL. 
+MOEA_Ghosh_A Association Rules Algorithm from KEEL. 
 }
 \usage{
-Alcalaetal_A(dat, seed, NumberofEvaluations, PopulationSize, NumberofBitsperGene, 
-  DecreasingFactorofLthresholdNOTUSED, FactorforParentCentricBLXCrossover, 
-  NumberofFuzzyRegionsforNumericAttributes, UseMaxOperatorfor1FrequentItemsets, 
-  MinimumSupport, MinimumConfidence)
+MOEA_Ghosh_A(dat, seed, NumberofObjetives, NumberofEvaluations, PopulationSize, 
+  PointCrossover, ProbabilityofCrossover, ProbabilityofMutation, 
+  Thefactorofamplitudeforeachattributeofthedataset)
 }
 \arguments{
 \item{dat}{Dataset as a data.frame object}
 \item{seed}{seed. Default value = 1286082570}
-\item{NumberofEvaluations}{Number of Evaluations. Default value = 10000}
-\item{PopulationSize}{Population Size. Default value = 50}
-\item{NumberofBitsperGene}{Number of Bits per Gene. Default value = 30}
-\item{DecreasingFactorofLthresholdNOTUSED}{Decreasing Factor of Lthreshold NOT USED. Default value = 0.1}
-\item{FactorforParentCentricBLXCrossover}{Factor for Parent Centric BLXCrossover. Default value = 1.0}
-\item{NumberofFuzzyRegionsforNumericAttributes}{Number of Fuzzy Regions for Numeric Attributes. Default value = 3}
-\item{UseMaxOperatorfor1FrequentItemsets}{Use Max Operator for 1 Frequent Itemsets. Default value = "false"}
-\item{MinimumSupport}{Minimum Support. Default value = 0.1}
-\item{MinimumConfidence}{Minimum Confidence. Default value = 0.8}
+\item{NumberofObjetives}{Number of Objetives. Default value = 3}
+\item{NumberofEvaluations}{Number of Evaluations. Default value = 50000}
+\item{PopulationSize}{Population Size. Default value = 100}
+\item{PointCrossover}{Point Crossover. Default value = 2}
+\item{ProbabilityofCrossover}{Probability of Crossover. Default value = 0.8}
+\item{ProbabilityofMutation}{Probability of Mutation. Default value = 0.02}
+\item{Thefactorofamplitudeforeachattributeofthedataset}{The factor of amplitude for each attribute of the dataset. Default value = 2.0}
 
 
 }
@@ -92,33 +89,33 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-dat<-loadKeelDataset("iris")
+#dat<-loadKeelDataset("iris")
 
 #Create algorithm
-algorithm <- Alcalaetal_A(dat)
+#algorithm <- MOEA_Ghosh_A(dat)
 
 #Run algorithm
-algorithm$run()
+#algorithm$run()
 
 #Rules in format arules
-algorithm$rules
+#algorithm$rules
 
 #Show a number of rules
-algorithm$showRules(2)
+#algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
-algorithm$getInterestMeasures()
+#algorithm$getInterestMeasures()
 
 #Add interst measure YuleY to set rules
-algorithm$addInterestMeasure("YuleY","yulesY")
+#algorithm$addInterestMeasure("YuleY","yulesY")
 
 #Sort by interest measure lift
-algorithm$sortBy("lift")
+#algorithm$sortBy("lift")
 
 #Save rules in CSV file
-algorithm$writeCSV("myrules")
+#algorithm$writeCSV("myrules")
 
 #Save rules in PMML file
-algorithm$writePMML("myrules")
+#algorithm$writePMML("myrules")
 }
 \keyword{association rules}
