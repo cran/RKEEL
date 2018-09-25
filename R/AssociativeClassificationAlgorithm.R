@@ -1,6 +1,10 @@
 #Class implementing a Classification Algorithm
 #Implements specific functions of an Associative classification algorithm
 
+require(Matrix)
+require(pmml)
+require(arules)
+
 AssociativeClassificationAlgorithm <- R6::R6Class("AssociativeClassificationAlgorithm",
 
   inherit = ClassificationAlgorithm,

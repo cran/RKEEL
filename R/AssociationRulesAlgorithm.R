@@ -1,6 +1,10 @@
 #Class implementing the AssociationRulesAlgorithm
   #Implements the common functions of an association rules algorithm
 
+require(Matrix)
+require(pmml)
+require(arules)
+
 AssociationRulesAlgorithm <- R6::R6Class("AssociationRulesAlgorithm",
 
   inherit = KeelAlgorithm,
