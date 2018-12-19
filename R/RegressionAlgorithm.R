@@ -39,20 +39,35 @@ RegressionAlgorithm <- R6::R6Class("RegressionAlgorithm",
       private$dataName <- "data"
     },
 
-    run = function(){
+    run = function(folderPath, expUniqueName, javaOptions){
 
       #Use tryCatch() to remove experiment folders even it there are errors
       tryCatch({
         #Experiment folder
         #expPath <- gsub("//", "/", system.file("exp", "", package="RKEEL"))
 
-        expPath <- gsub("\\\\", "/", tempdir())
+        if(missing(folderPath)){
+          expPath <- gsub("\\\\", "/", tempdir())
+        }
+        else{
+          expPath <- folderPath
+        }
 
         if(substr(expPath, nchar(expPath), nchar(expPath)) != "/"){
           expPath <- paste0(expPath, "/")
         }
 
-        private$mainPath <- paste0(expPath, "experiment_", gsub(" ", "_", gsub(":", "-", toString(Sys.time()))), sample(1:10000, 1))
+        if(missing(expUniqueName)){
+          private$mainPath <- paste0(expPath, "experiment_", gsub(" ", "_", gsub(":", "-", toString(Sys.time()))), sample(1:10000, 1))
+        }
+        else{
+          private$mainPath <- paste0(expPath, expUniqueName)
+        }
+
+        if(dir.exists(private$mainPath)){
+          stop(paste0("The current experiment folder ",  private$mainPath, " already exists. Please select an unique experiment folder name.", sep="\n"))
+        }
+
         private$generateExperimentDir(private$mainPath)
 
         #Copy dataset folder
@@ -81,28 +96,41 @@ RegressionAlgorithm <- R6::R6Class("RegressionAlgorithm",
 
         #Change work directory to execute .jar
         wdPath <- getwd()
+
+        #Manage options to java command line
+        if(missing(javaOptions)){
+          javaOptions <- ""
+        }
+
         setwd(paste0(private$mainPath, "/scripts/"))
         if(grepl("windows", tolower(Sys.info()[1]))) {
-          system(paste0(private$javaPath, "java -jar RunKeel.jar"), show.output.on.console = FALSE)
+          system(paste0(private$javaPath, "java ", javaOptions, " -jar RunKeel.jar"), show.output.on.console = FALSE)
         }
         else {
-          system(paste0(private$javaPath, "java -jar RunKeel.jar"), ignore.stdout = TRUE)
+          system(paste0(private$javaPath, "java ", javaOptions, " -jar RunKeel.jar"), ignore.stdout = TRUE)
         }
         setwd(wdPath)
 
         #read outputs
         private$readOutputs(paste0(private$mainPath, "/results/", private$algorithmName, ".", private$dataName, "/result0.tra"), paste0(private$mainPath, "/results/", private$algorithmName, ".", private$dataName, "/result0.tst"), paste0(private$mainPath, "/results/", private$algorithmName, ".", private$dataName, "/result0e0.txt"))
 
-        cat(paste0("Algorithm ",  class(self)[1], " executed successfully", sep="\n"))
+        if(missing(folderPath)){
+          cat(paste0("Algorithm ",  class(self)[1], " executed successfully", sep="\n"))
+        }
+        else{
+          cat(paste0("Algorithm ",  class(self)[1], " executed successfully. Stored in: ", private$mainPath, sep="\n"))
+        }
 
       }, error = function(err) {
         #Error
         cat(paste0("Error! ",err))
       }, finally = {
         #Remove data files and Keel experiment folder
-        #unlink(paste0(private$dataPath, private$trainFilename))
-        #unlink(paste0(private$dataPath, private$testFilename))
-        #unlink(private$mainPath, recursive = TRUE)
+        if(missing(folderPath)){
+          unlink(paste0(private$dataPath, private$trainFilename))
+          unlink(paste0(private$dataPath, private$testFilename))
+          unlink(private$mainPath, recursive = TRUE)
+        }
       })
 
     },

@@ -53,19 +53,34 @@ AssociationRulesAlgorithm <- R6::R6Class("AssociationRulesAlgorithm",
       private$dataName <- "data"
     },
 
-    run = function(){
+    run = function(folderPath, expUniqueName, javaOptions){
       #Use tryCatch() to remove experiment folders even it there are errors
       tryCatch({
         #Experiment folder
         #expPath <- gsub("//", "/", system.file("exp", "", package="RKEEL"))
-        cat("Executing algorithm...\n")
-        expPath <- gsub("\\\\", "/", tempdir())
+
+        if(missing(folderPath)){
+          expPath <- gsub("\\\\", "/", tempdir())
+        }
+        else{
+          expPath <- folderPath
+        }
 
         if(substr(expPath, nchar(expPath), nchar(expPath)) != "/"){
           expPath <- paste0(expPath, "/")
         }
 
-        private$mainPath <- paste0(expPath, "experiment_", gsub(" ", "_", gsub(":", "-", toString(Sys.time()))), sample(1:10000, 1))
+        if(missing(expUniqueName)){
+          private$mainPath <- paste0(expPath, "experiment_", gsub(" ", "_", gsub(":", "-", toString(Sys.time()))), sample(1:10000, 1))
+        }
+        else{
+          private$mainPath <- paste0(expPath, expUniqueName)
+        }
+
+        if(dir.exists(private$mainPath)){
+          stop(paste0("The current experiment folder ",  private$mainPath, " already exists. Please select an unique experiment folder name.", sep="\n"))
+        }
+
         private$generateExperimentDir(private$mainPath)
 
         #Copy dataset folder
@@ -115,25 +130,40 @@ AssociationRulesAlgorithm <- R6::R6Class("AssociationRulesAlgorithm",
 
         #Change work directory to execute .jar
         wdPath <- getwd()
+
+        #Manage options to java command line
+        if(missing(javaOptions)){
+          javaOptions <- ""
+        }
+
         setwd(paste0(private$mainPath, "/scripts/"))
         if(grepl("windows", tolower(Sys.info()[1]))) {
-          system(paste0(private$javaPath, "java -jar RunKeel.jar"), show.output.on.console = FALSE)
+          system(paste0(private$javaPath, "java ", javaOptions, " -jar RunKeel.jar"), show.output.on.console = FALSE)
         }
         else {
-          system(paste0(private$javaPath, "java -jar RunKeel.jar"), ignore.stdout = TRUE)
+          system(paste0(private$javaPath, "java ", javaOptions, " -jar RunKeel.jar"), ignore.stdout = TRUE)
         }
         setwd(wdPath)
 
         #read outputs
         private$readOutputs(paste0(private$mainPath, "/results/KEELToPMML/TST", private$algorithmName, "/result0s0file0.pmml"),paste0(private$mainPath, "/results/KeelLateXTables/TST", private$algorithmName, "/result0s0.tex"))
 
+        if(missing(folderPath)){
+          cat(paste0("Algorithm ",  class(self)[1], " executed successfully", sep="\n"))
+        }
+        else{
+          cat(paste0("Algorithm ",  class(self)[1], " executed successfully. Stored in: ", private$mainPath, sep="\n"))
+        }
+
       }, error = function(err) {
         #Error
         cat(paste0("Error! ",err))
       }, finally = {
         #Remove data files and Keel experiment folder
-        unlink(paste0(private$dataPath, private$datFilename))
-        unlink(private$mainPath, recursive = TRUE)
+        if(missing(folderPath)){
+          unlink(paste0(private$dataPath, private$datFilename))
+          unlink(private$mainPath, recursive = TRUE)
+        }
       })
 
     },
@@ -381,11 +411,11 @@ AssociationRulesAlgorithm <- R6::R6Class("AssociationRulesAlgorithm",
 
         private$resultLatex <- readLines(latexfile,n = -1)
 
-        cat(paste0("Algorithm ",  class(self)[1], " executed successfully", sep="\n"))
-
       }, error = function(err) {
         #Error
-        cat("Error! The number of rules generated is null or too low.")
+        cat("Error! The number of rules generated is null or too low!")
+        cat(pmmlfile, sep="\n")
+        cat(latexfile, sep="\n")
         #cat(readLines(pmmlfile,n = -1))
         private$resultLatex <- readLines(latexfile,n = -1)
       })

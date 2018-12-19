@@ -18,9 +18,6 @@ AssociativeClassificationAlgorithm <- R6::R6Class("AssociativeClassificationAlgo
       super$setParameters(train, test)
     },
 
-    run = function(){
-      super$run()
-    },
 
     #Read algorithm output files
     readOutputs = function(trafile, tstfile, txtfile){
