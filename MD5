@@ -1,4 +1,4 @@
-2350c9aa17941e8f75a2d305f2b97b64 *DESCRIPTION
+9ff305183d0fda2bda506a431a731389 *DESCRIPTION
 d2cecf92d1c9b407e188ebd4425ebc19 *NAMESPACE
 af33ff8dee5cc8650d6ed31b80cc4209 *R/ABB-IEP-FS.R
 f315f8f262c1a6bbd0f4133721694bb2 *R/ANR-F.R
@@ -10,7 +10,7 @@ ad2d7c658eecb0f646f0053ed0c502e0 *R/Alcalaetal-A.R
 e4ddd3487d8f0cb039848fb58b5aebca *R/AllKNN-TSS.R
 f409ff56bc31020b77edc0a837a04439 *R/AllPosible-MV.R
 2fd146cd093964f74f3df3eb8ca2652d *R/Apriori-A.R
-9f9b83c8d0271e550b02e2a9b42214c4 *R/AssociationRulesAlgorithm.R
+82cb5ba26deb877db8109f69b9a0155e *R/AssociationRulesAlgorithm.R
 00e3e9dff4837d8f09a7b420602d3ae0 *R/AssociativeClassificationAlgorithm.R
 bb5fb8a5b32778126c7dcbe2b9fca57e *R/BNGE-C.R
 5dba64a0ff004bb17f7c4f69effdf4c1 *R/BSE-C.R
@@ -33,7 +33,7 @@ e34553cba1892c28faf962db763bdd43 *R/CNN-C.R
 1334f62105d4d1dd62fe183a2a368429 *R/C_SVM-C.R
 00edf5a27c2b3a1b1a27af76717a7f2f *R/CamNN-C.R
 2266ad0cf898fecc428257c94ac567c4 *R/CenterNN-C.R
-5d69d69fd59e614f4d7a8089f63dae1c *R/ClassificationAlgorithm.R
+1fd6419cb814350ca54858faf706a80b *R/ClassificationAlgorithm.R
 ec49cef23e00949a459870025894601d *R/ClassificationResults.R
 ed3cc1923f7164eb8ab56eb3b9506f91 *R/CleanAttributes-TR.R
 bbe0cab023f5a837259defefa9f4504b *R/ClusterAnalysis-D.R
@@ -69,7 +69,7 @@ f6502a97a753bf94fa5f66654e8ea77c *R/ID3-C.R
 358c098f832de82094eb5ca68dfbb884 *R/ID3-D.R
 f9b6de24db6ee887f44f7c93125659b0 *R/IF_KNN-C.R
 cf52f3a9e270bba43b4e2a9ff2ce6f58 *R/Ignore-MV.R
-3840702694b9e6b88d0527c7d16b12a7 *R/ImbalancedClassificationAlgorithm.R
+9bfe11ed1adb7484beb7452a35e5b968 *R/ImbalancedClassificationAlgorithm.R
 4a9af0494791e9317a29c82bea341f5b *R/Incr-RBFN-C.R
 d5093b8a873654a01352c1db8ac92aff *R/IterativePartitioningFilter-F.R
 a3fb9764fd8d58b4cb65db747e8b2dc2 *R/JFKNN-C.R
@@ -78,7 +78,7 @@ e2b6b556ee94b6aa156bf15507c40b62 *R/KMeans-MV.R
 9b62986f4f0af342611f666652ae1c2d *R/KNN-MV.R
 ef40d1f4e41833000703bf417e751b7e *R/KSNN-C.R
 c4406965be27ecef4ae9be84a869f8dc *R/KStar-C.R
-456093ba41303d70d7df15315b94c51b *R/KeelAlgorithm.R
+4747a2b4bc6d4b451264e790b5c32853 *R/KeelAlgorithm.R
 a9f26e767eefc5f3880ac6ff248541d3 *R/KeelUtils.R
 0af7a406b64de106535869c7305e7840 *R/Kernel-C.R
 e5409d10d94026c04a963b329654740f *R/LDA-C.R
@@ -115,14 +115,14 @@ b572aea1d0d0cb4212abb1c66b86fbcf *R/PRISM-C.R
 1af4f428bac859356c2e03d3ff4b9f8f *R/PW-C.R
 3f398dc12eb713f616b2956cac581490 *R/PolQuadraticLMS-C.R
 4d3f2f5c3ee160856befd20c1b5f4f1e *R/PolQuadraticLMS-R.R
-2cd42a606d8cb05a037f02cd84178336 *R/PreprocessAlgorithm.R
+a520a01d777bdc9a7a332e5d1cbe9108 *R/PreprocessAlgorithm.R
 c87d9d5af07324e6999db0f208f9b768 *R/Proportional-D.R
 4d7a51310a91c41a67d80f712fd03f67 *R/QAR_CIP_NSGAII-A.R
 bc798a99ded6b5c9cf7c47086f5c64e9 *R/QDA-C.R
 5cc66ab8ae648196b7ad94ffd6c154d3 *R/RBFN-C.R
 e8d409bebfd5ddcf9a7b3c5c00658776 *R/RBFN-R.R
 4020dabc671aafd6f469a59bb51b23ec *R/RISE-C.R
-d9d59c39f656a1bf95f83f45abc9e989 *R/RegressionAlgorithm.R
+ffa4579f0b5b617a090e2581ea514dfa *R/RegressionAlgorithm.R
 e399e9609b62cef9f229ce5d998e5f37 *R/RegressionResults.R
 5ef4a41eddc856dbf8c0afe7e1fa50e4 *R/Relief-FS.R
 a1cfd21780b565a869957285bb27eeef *R/Ripper-C.R
@@ -144,7 +144,7 @@ b14a78aa372ade33740c14babce52afe *R/ZScore-TR.R
 1c6f15571dab507cec7748d6a3a62305 *man/ABB-IEP-FS.Rd
 4715008d80422d7184d82cf6af70188a *man/ANR-F.Rd
 ffe5b08147c52a3bef767071918d3e7a *man/ART-C.Rd
-ee361b59ecd447c633424f6c1a7c573a *man/AdaBoost-I.Rd
+d9bd482da97dba25a9b3a7ccfa456084 *man/AdaBoost-I.Rd
 af8748145e1837b132639f0167bfcc8d *man/AdaBoostNC-C.Rd
 9efb0af77a99dd63dd76961dbfea19de *man/Alatasetal-A.Rd
 68a4c3509be52fc32450a2329bf617ad *man/Alcalaetal-A.Rd
@@ -157,7 +157,7 @@ c4623a245a0f816be4e099a8b2b11d7e *man/AllPosible-MV.Rd
 d09eef40a0124338120426f10268487f *man/BSE-C.Rd
 9a7252b6715b24b45de8471c5eee86cb *man/Bayesian-D.Rd
 cfe65520161ee613c97a624556be7620 *man/Bojarczuk_GP-C.Rd
-833bd60ea51407c886fbab637d2ade38 *man/C45-C.Rd
+13d4ea928f488d33efd16cab8eb1aef4 *man/C45-C.Rd
 bf2c1cf9f4f6f139738e7d0764f8c765 *man/C45Rules-C.Rd
 3af1d7a8b1e853dea716e61c90487040 *man/C45_Binarization-C.Rd
 28a2dc591e14b1ad2a94c62eb3c0b3fe *man/CART-C.Rd
@@ -286,8 +286,8 @@ bfae3a0f7b2d94d0fbf89e95ff96fcf2 *man/hasContinuousData.Rd
 f05f709299719b80f69a1da329ed0054 *man/isMultiClass.Rd
 5b2ab022c952a984777cb0bd4d716398 *man/loadKeelDataset.Rd
 10e58750fa4c35e4e8a18d559a4df590 *man/readKeel.Rd
-2445070ae1f666703187bbd172b1343b *man/runCV.Rd
-cc1ea68e466ea343460d1c54cafc8aa4 *man/runParallel.Rd
-36b63672054b079c057749f9226aae4a *man/runSequential.Rd
+c6213038c998ab6d9140af9f5c49f4fa *man/runCV.Rd
+31b3a492d52bf6fe4e444c0a2bfdfc91 *man/runParallel.Rd
+e9bd9337eea14b604d433158c4da1c4a *man/runSequential.Rd
 47b137e10d25c410ed6dfa5611b9a9ea *man/writeDatFromDataframe.Rd
 47958c5af361d8848058d8eb28583e3d *man/writeDatFromDataframes.Rd
