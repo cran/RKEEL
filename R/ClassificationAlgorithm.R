@@ -92,9 +92,9 @@ ClassificationAlgorithm <- R6::R6Class("ClassificationAlgorithm",
       }, finally = {
         #Remove data files and Keel experiment folder
         if(missing(folderPath)){
-          #unlink(paste0(private$dataPath, private$trainFilename))
-          #unlink(paste0(private$dataPath, private$testFilename))
-          #unlink(private$mainPath, recursive = TRUE)
+          unlink(paste0(private$dataPath, private$trainFilename))
+          unlink(paste0(private$dataPath, private$testFilename))
+          unlink(private$mainPath, recursive = TRUE)
         }
       })
 
