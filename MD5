@@ -1,4 +1,4 @@
-166324f50958967ec33b5070287a0d1c *DESCRIPTION
+83e3a6d71c5dbff33db30ddb5d2f52e7 *DESCRIPTION
 d2cecf92d1c9b407e188ebd4425ebc19 *NAMESPACE
 af33ff8dee5cc8650d6ed31b80cc4209 *R/ABB-IEP-FS.R
 f315f8f262c1a6bbd0f4133721694bb2 *R/ANR-F.R
@@ -160,8 +160,8 @@ cfe65520161ee613c97a624556be7620 *man/Bojarczuk_GP-C.Rd
 b78f57754a8bcb335df6f96dd0cee6d7 *man/C45-C.Rd
 bf2c1cf9f4f6f139738e7d0764f8c765 *man/C45Rules-C.Rd
 3af1d7a8b1e853dea716e61c90487040 *man/C45_Binarization-C.Rd
-b3862f0637b3f5adb17949625f23c23f *man/CART-C.Rd
-455fa062f93a2c17cd565e6a0af65e1b *man/CART-R.Rd
+3801f907929fce4d25709647b2171a5d *man/CART-C.Rd
+c56155f41411e2dc0d2c0542d00f8e9f *man/CART-R.Rd
 e740d937a253a5ac666b70366ce728bf *man/CBA-C.Rd
 33d5cc2f973775e58e524f4c13243adb *man/CFAR-C.Rd
 fc9b92eccd79fba08540e2ba2198b4e1 *man/CFKNN-C.Rd
@@ -187,7 +187,7 @@ c3894720cf375b11aef90b1c27d9a360 *man/Decr-RBFN-C.Rd
 96cae0450b456395344c5bf5287893e9 *man/EPSILON_SVR-R.Rd
 886f2ba9b4d2702bca26ff610083b792 *man/Eclat-A.Rd
 e7e72dba347f7522522f709e9bed97bb *man/FCRA-C.Rd
-7039ab8806da1fb2ebca62205eee380a *man/FPgrowth-A.Rd
+e584d7d73c4c9a4eab895d96b036ca1a *man/FPgrowth-A.Rd
 82ded6b5281d6c99e55575a78aa4ba43 *man/FRNN-C.Rd
 d9c4222a3c059525f66aebfdca6ad14d *man/FRSBM-R.Rd
 e84f4f8e2dd01de01c4a2f5c27afe680 *man/FURIA-C.Rd
@@ -289,5 +289,5 @@ f05f709299719b80f69a1da329ed0054 *man/isMultiClass.Rd
 c6213038c998ab6d9140af9f5c49f4fa *man/runCV.Rd
 31b3a492d52bf6fe4e444c0a2bfdfc91 *man/runParallel.Rd
 e9bd9337eea14b604d433158c4da1c4a *man/runSequential.Rd
-6f90fc47f58c3fa187f492aff2444db6 *man/writeDatFromDataframe.Rd
+e911e05b1c7e3851856f7a27a68e8aa7 *man/writeDatFromDataframe.Rd
 47958c5af361d8848058d8eb28583e3d *man/writeDatFromDataframes.Rd
