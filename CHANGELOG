@@ -1,0 +1,2 @@
+v 1.3.3 (2021/05/10)
+    - Modified writeDatFromDataframe, writeDatFromDataframes, and getAttributeLinesFromDataframes methods to solve problems when reading datasets with integer values. Previously, sometimes these values were stored as real; now they should be stored as integer. 

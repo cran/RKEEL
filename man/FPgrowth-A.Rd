@@ -83,19 +83,19 @@ For more information see ?arules::interestMeasure  \cr \cr
 \examples{
 
 #Load KEEL dataset iris
-#dat<-loadKeelDataset("iris")
+dat<-loadKeelDataset("iris")
 
 #Create algorithm
-#algorithm <- FPgrowth_A(dat)
+algorithm <- FPgrowth_A(dat)
 
 #Run algorithm
-#algorithm$run()
+algorithm$run()
 
 #Rules in format arules
-#algorithm$rules
+algorithm$rules
 
 #Show a number of rules
-#algorithm$showRules(2)
+algorithm$showRules(2)
 
 #Return a data.frame with all interest measures of set rules
 #algorithm$getInterestMeasures()
