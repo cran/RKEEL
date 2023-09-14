@@ -51,7 +51,7 @@ ClassificationAlgorithm <- R6::R6Class("ClassificationAlgorithm",
         writeDatFromDataframes(private$trainDataset, private$testDataset, paste0(private$mainPath, "/datasets/", private$dataName, "/", private$trainFilename), paste0(private$mainPath, "/datasets/", private$dataName, "/", private$testFilename))
 
         #Copy algorithm exe
-        file.copy(system.file("exe", private$jarName, package = "RKEELjars"), paste0(private$mainPath, "/exe/", private$jarName))
+        file.copy(system.file("exe", private$jarName, package = "RKEEL"), paste0(private$mainPath, "/exe/", private$jarName))
 
         #Create results dir
         dir.create(paste0(private$mainPath, "/results/", private$algorithmName, ".", private$dataName))
@@ -66,6 +66,9 @@ ClassificationAlgorithm <- R6::R6Class("ClassificationAlgorithm",
 
         #Change work directory to execute .jar
         wdPath <- getwd()
+        #Change to old current working directory after finishing the function
+        # even if an error occurs
+        on.exit(setwd(wdPath))
 
         setwd(paste0(private$mainPath, "/scripts/"))
         if(grepl("windows", tolower(Sys.info()[1]))) {
